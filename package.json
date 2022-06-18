@@ -1,0 +1,21 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Сhat app designed for graduation project",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server/dist/index.js",
+    "client": "npm run --prefix ./client start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemTopolskyi/chat.git"
+  },
+  "keywords": [],
+  "author": "ArtemTopolskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtemTopolskyi/chat/issues"
+  },
+  "homepage": "https://github.com/ArtemTopolskyi/chat#readme"
+}

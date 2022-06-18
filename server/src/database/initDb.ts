@@ -16,5 +16,5 @@ export const sequelize = new Sequelize({
   password: dbPassword,
   host: dbHost,
   models: Object.values(models),
-  logging: false,
+  logging: true,
 });

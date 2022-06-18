@@ -18,5 +18,6 @@ export const chatsResolver = async (_: ApolloServer, __: Arguments, context: Con
     },
     raw: true,
     nest: true,
+    logging: console.log,
   });
 };

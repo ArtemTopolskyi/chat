@@ -82,7 +82,7 @@ async function startApolloServer(typeDefs: DocumentNode, resolvers: {}) {
   await server.start();
 
   const corsOptions = {
-    origin: ['https://studio.apollographql.com'],
+    origin: ['http://localhost:3000'],
     credentials: true,
   };
 
