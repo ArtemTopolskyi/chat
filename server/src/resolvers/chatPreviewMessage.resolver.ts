@@ -17,7 +17,7 @@ export const chatPreviewMessageResolver = async (
     where: {
       chatId: chat.id,
     },
-    order: ['created_at', 'DESC'],
+    order: [['created_at', 'DESC']],
     limit: 1,
     raw: true,
     nest: true,

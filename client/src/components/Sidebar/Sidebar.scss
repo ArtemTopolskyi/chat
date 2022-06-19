@@ -1,0 +1,34 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 32px 12px;
+  box-sizing: border-box;
+
+  width: 80px;
+  height: 100%;
+
+  border-right: 1px solid #F0EEF6;
+
+  &__avatar {
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+
+    background-color: #F0EEF6;
+  }
+
+  &__exit-button {
+    display: block;
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background-color: #F0EEF6;
+  }
+}

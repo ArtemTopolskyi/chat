@@ -1,0 +1,16 @@
+@import 'styles/reset.scss';
+@import 'styles/fonts.scss';
+@import 'styles/general.scss';
+
+.app {
+  display: flex;
+
+  height: 100vh;
+}
+
+.app__chat-container {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100vw - 80px);
+}
