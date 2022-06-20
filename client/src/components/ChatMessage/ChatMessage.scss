@@ -1,0 +1,23 @@
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
+  width: max-content;
+
+  background-color: #E2DEED;
+  font-size: 13px;
+  border-radius: 8px 8px 8px 0;
+
+  &.isOwn {
+    margin-left: auto;
+    background-color: #FFF;
+    border-radius: 8px 8px 0 8px;
+  }
+
+  &__time {
+    color: #AA91AE;
+    align-self: flex-end;
+  }
+}
+

@@ -4,6 +4,7 @@ export const CHATS_QUERY = gql`
   query chats {
     chats {
       id
+      name
       previewMessage {
         id
         senderId

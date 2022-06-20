@@ -3,17 +3,29 @@ import { ChatPage } from './components/ChatPage';
 import { Sidebar } from './components/Sidebar';
 import './App.scss';
 import { Header } from './components/Header';
+import { AppContext } from './contexts/AppContext';
+import { useMe } from './hooks/useMe';
 
-const App = () => (
-  <div className="app">
-    <Sidebar />
+const App = () => {
+  const me = useMe();
 
-    <div className='app__chat-container'>
-      <Header />
+  if (!me) {
+    return <p>Loading...</p>
+  }
 
-      <ChatPage />
-    </div>
-  </div>
-);
+  return (
+    <AppContext.Provider value={{ me: me.id }}>
+      <div className="app">
+        <Sidebar />
+
+        <div className='app__chat-container'>
+          <Header />
+
+          <ChatPage />
+        </div>
+      </div>
+    </AppContext.Provider>
+  );
+};
 
 export default App;

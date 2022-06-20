@@ -1,0 +1,44 @@
+.chat-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100px;
+
+  padding: 20px;
+
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #F0EEF6;
+
+  &.selected {
+    background-color: #F0EEF6;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F0EEF6;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  &__name {
+    font-size: 14px;
+    color: black;
+  }
+
+  &__message {
+    font-size: 13px;
+    color: #AA91AE;
+    text-overflow: ellipsis;
+  }
+}

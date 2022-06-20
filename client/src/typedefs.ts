@@ -14,6 +14,12 @@ export interface Participant {
 
 export interface Chat {
   id: number;
+  name: string;
   previewMessage: Message;
   participants: Participant[];
+}
+
+export interface User {
+  id: number;
+  username: string;
 }

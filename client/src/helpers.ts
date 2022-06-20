@@ -59,3 +59,13 @@ export const getFormattedDate = (date: Date) => {
 
   return `${getDateName(weekDay)}, ${day} of ${getMonthName(month)}`;
 };
+
+export const formatTimePoint = (point: string) => (
+  point.length > 1
+    ? point
+    : `0${point}`
+);
+
+export const formatSendingTime = (date: Date) => (
+  `${formatTimePoint(String(date.getHours()))}:${formatTimePoint(String(date.getMinutes()))}`
+);

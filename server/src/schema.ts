@@ -4,7 +4,7 @@ export const typeDefs = gql`
   scalar Date
 
   type Query {
-    me: String!
+    me: User!
     login(fields: LoginFields!): User!
     chats: [Chat!]!
     chatMessages(chatId: Int!): [Message!]!
@@ -12,7 +12,7 @@ export const typeDefs = gql`
 
   type Mutation {
     register(fields: RegisterUserFields!): User!
-    createChat(userIds: [Int!]!): Chat!
+    createChat(userIds: [Int!]!, name: String): Chat!
     sendMessage(fields: SendMessageFields!): Message!
     updateMessage(fields: UpdateMessageFields!): Message!
     deleteMessage(messageId: Int!): Boolean!
@@ -33,6 +33,7 @@ export const typeDefs = gql`
 
   type Chat {
     id: Int!
+    name: String!
     previewMessage: Message
     participants: [ChatParticipant!]!
   }

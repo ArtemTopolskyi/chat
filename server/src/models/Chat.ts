@@ -16,6 +16,10 @@ class Chat extends Model {
   id: number;
 
   @AllowNull(false)
+  @Column
+  name: string;
+
+  @AllowNull(false)
   @CreatedAt
   @Default(DataType.NOW)
   @Column({

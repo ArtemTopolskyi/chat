@@ -3,8 +3,12 @@ import { useQuery } from "@apollo/client";
 import { Message } from "../typedefs";
 import { CHAT_MESSAGES_QUERY } from '../queries/chatMessages.query';
 
-export const useChatMessages = (): Message[] => {
-  const { data, loading, error } = useQuery(CHAT_MESSAGES_QUERY);
+export const useChatMessages = (chatId: number): Message[] => {
+  const { data, loading, error } = useQuery(CHAT_MESSAGES_QUERY, {
+    variables: {
+      chatId,
+    },
+  });
 
   const isReady = !loading && !error;
 

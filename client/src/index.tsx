@@ -9,7 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import App from './App';
 
-const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY1NTU3NjUzNSwiZXhwIjoxNjU1NzQ5MzM1fQ.mqWb4RKfPsa4OC8AbfXzqaRL1AHZMD64RuG2QDsYLZs';
+const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY1NTc1MjA5OCwiZXhwIjoxNjU1OTI0ODk4fQ.cNt9gbpKx2X8gMCiM-A12wDNWWayUJjiquM_7pIFX0E';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,6 +1,8 @@
-import React, { FC, useState, useMemo, useCallback } from 'react';
+import React, { FC, useState, useMemo } from 'react';
 import { useChats } from '../../hooks/useChats';
 import { ChatsList } from '../ChatsList';
+import { ChatWindow } from '../ChatWindow';
+import './ChatPage.scss';
 
 export const ChatPage: FC = () => {
   const chats = useChats();
@@ -21,9 +23,19 @@ export const ChatPage: FC = () => {
 
   return (
     <div className='chat-page'>
-      <ChatsList />
+      <ChatsList
+        chats={chats}
+        openedChatId={openedChatId}
+        setOpenedChatId={setOpenedChatId}
+      />
 
-      <ChatPage />
+      {openedChat
+        ? (
+          <ChatWindow chat={openedChat} />
+        )
+        : (
+          <p>Select chat...</p>
+        )}
     </div>
   );
 };
